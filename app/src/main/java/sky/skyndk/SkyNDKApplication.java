@@ -1,39 +1,42 @@
 package sky.skyndk;
 
-import android.app.Application;
-
-import jc.sky.ISKYBind;
-import jc.sky.SKYHelper;
-import jc.sky.modules.SKYModulesManage;
-import jc.sky.modules.methodProxy.SKYMethods;
+import jc.sky.SKYApplication;
 import retrofit2.Retrofit;
+import sky.core.SKYPlugins;
 
 /**
  * @创建人 sky
  * @创建时间 16/9/7 上午10:39
  * @类描述
  */
-public class SkyNDKApplication extends Application implements ISKYBind {
-
-	@Override public void onCreate() {
-		super.onCreate();
-		SKYHelper.bind(this);
-	}
+public class SkyNDKApplication extends SKYApplication {
 
 	@Override public boolean isLogOpen() {
 		return true;
 	}
 
-	@Override public Retrofit getRestAdapter(Retrofit.Builder builder) {
+	@Override public Retrofit.Builder httpAdapter(Retrofit.Builder builder) {
 		builder.baseUrl("http://www.baidu.com");
-		return builder.build();
+		return builder;
 	}
 
-	@Override public SKYMethods getMethodInterceptor(SKYMethods.Builder builder) {
-		return builder.build();
+	@Override public SKYPlugins.Builder pluginInterceptor(SKYPlugins.Builder builder) {
+		return builder;
 	}
 
-	@Override public SKYModulesManage getModulesManage() {
-		return new SKYModulesManage(this);
+	@Override public int layoutLoading() {
+		return 0;
+	}
+
+	@Override public int layoutEmpty() {
+		return 0;
+	}
+
+	@Override public int layoutBizError() {
+		return 0;
+	}
+
+	@Override public int layoutHttpError() {
+		return 0;
 	}
 }

@@ -1,0 +1,19 @@
+# ninja log v5
+1	202	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	4d03cd62620faa1b
+0	252	0	CMakeFiles/native-lib.dir/src/main/cpp/AndroidLog.cpp.o	ccc060a5a5e0d32
+0	308	0	CMakeFiles/native-lib.dir/src/main/cpp/md5.cpp.o	bebefd20d3f92cb0
+1	380	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+380	714	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+1	301	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+301	547	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+1	160	0	CMakeFiles/native-lib.dir/src/main/cpp/AndroidLog.cpp.o	ccc060a5a5e0d32
+1	287	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+287	524	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+28	1051	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+1051	1722	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+3	642	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+642	1094	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+1	600	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	303f91901d105d46
+600	901	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a
+0	177	0	CMakeFiles/native-lib.dir/src/main/cpp/md5.cpp.o	bebefd20d3f92cb0
+177	401	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	bfa8bc24387c1e2a

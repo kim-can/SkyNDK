@@ -1,20 +1,20 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
 
     defaultConfig {
         applicationId "sky.skyndk"
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdkVersion 19
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
-        ndk {
-            moduleName "skyNDK"       //生成的so文件名字，调用C程序的代码中会用到该名字
-            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种平台下的so库
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
         }
     }
     buildTypes {
@@ -23,13 +23,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 24, 'hours'
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.github.skyJinc:sky:1.5'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.jincanshen:sky:3.1.0-SNAPSHOT'
+    annotationProcessor 'com.jincanshen:sky-compiler:3.1.0-SNAPSHOT'
 }

@@ -1,0 +1,56 @@
+
+{
+	"buildFiles" : [ "/Users/sky/GitHub/SkyNDK/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/sky/dev/sdk/cmake/3.6.4111459/bin/cmake --build /Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/sky/dev/sdk/cmake/3.6.4111459/bin/cmake --build /Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/sky/dev/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/sky/dev/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/sky/dev/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/sky/GitHub/SkyNDK/app/src/main/cpp/AndroidLog.cpp",
+					"workingDirectory" : "/Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/sky/dev/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/sky/dev/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/sky/dev/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/sky/GitHub/SkyNDK/app/src/main/cpp/md5.cpp",
+					"workingDirectory" : "/Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/sky/dev/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/sky/dev/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/sky/dev/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/sky/GitHub/SkyNDK/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/sky/dev/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/sky/dev/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/sky/dev/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/sky/GitHub/SkyNDK/app/src/main/cpp/native-md5.cpp",
+					"workingDirectory" : "/Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so",
+			"toolchain" : "15739048601374081145"
+		}
+	},
+	"toolchains" : 
+	{
+		"15739048601374081145" : 
+		{
+			"cCompilerExecutable" : "/Users/sky/dev/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/sky/dev/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

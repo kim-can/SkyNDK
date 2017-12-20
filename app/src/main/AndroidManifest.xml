@@ -19,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MD5Activity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
