@@ -23,6 +23,12 @@ ANDROID_NDK:UNINITIALIZED=/Users/sky/dev/sdk/ndk-bundle
 //No help, variable specified on the command line.
 ANDROID_PLATFORM:UNINITIALIZED=android-21
 
+//No help, variable specified on the command line.
+ANDROID_STL:UNINITIALIZED=c++_shared
+
+//No help, variable specified on the command line.
+ANDROID_TOOLCHAIN:UNINITIALIZED=clang
+
 //Archiver
 CMAKE_AR:FILEPATH=/Users/sky/dev/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ar
 
@@ -40,7 +46,7 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=
 CMAKE_BUILD_TYPE:STRING=Release
 
 //Flags used by the compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=
+CMAKE_CXX_FLAGS:STRING=-std=c++14 -pedantic -fPIC -fexceptions -frtti -Wall -Wignored-qualifiers -Wtype-limits -Wmissing-field-initializers -Wno-format-pedantic -g0
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=
@@ -56,7 +62,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by default with all C++ applications.
-CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lm "/Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a"
+CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lm "/Users/sky/dev/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++.so"
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -185,6 +191,9 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/sky/dev/sdk/ndk-bundle/build/cmake/android.
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//No help, variable specified on the command line.
+PLATFORM_TARGET:UNINITIALIZED=android
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/Users/sky/GitHub/SkyNDK/app/.externalNativeBuild/cmake/release/arm64-v8a

@@ -7,9 +7,12 @@ arguments :
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/sky/GitHub/SkyNDK/app/build/intermediates/cmake/debug/obj/x86
 -DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=/Users/sky/dev/sdk/ndk-bundle
--DCMAKE_CXX_FLAGS=
+-DCMAKE_CXX_FLAGS=-std=c++14 -pedantic -fPIC -fexceptions -frtti -Wall -Wignored-qualifiers -Wtype-limits -Wmissing-field-initializers -Wno-format-pedantic -g
 -DCMAKE_TOOLCHAIN_FILE=/Users/sky/dev/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
 -DCMAKE_MAKE_PROGRAM=/Users/sky/dev/sdk/cmake/3.6.4111459/bin/ninja
 -GAndroid Gradle - Ninja
+-DPLATFORM_TARGET=android
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_STL=c++_shared
 jvmArgs : 
 

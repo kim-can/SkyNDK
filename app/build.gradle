@@ -12,8 +12,25 @@ android {
         versionName "1.0"
 
         externalNativeBuild {
-            cmake {
-                cppFlags ""
+            externalNativeBuild {
+                cmake {
+                    arguments '-DPLATFORM_TARGET=android',
+                            '-DANDROID_TOOLCHAIN=clang',
+                            '-DANDROID_STL=c++_shared'
+                    cppFlags '-std=c++14',
+                            '-pedantic',
+                            '-fPIC',
+                            '-fexceptions',
+                            '-frtti',
+                            //warnings
+                            '-Wall',
+                            '-Wignored-qualifiers',
+                            '-Wtype-limits',
+                            '-Wmissing-field-initializers',
+                            '-Wno-format-pedantic'
+
+                    abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
+                }
             }
         }
     }
@@ -26,6 +43,18 @@ android {
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
+        }
+    }
+    buildTypes {
+        debug {
+            externalNativeBuild {
+                cmake.cppFlags '-g'
+            }
+        }
+        release {
+            externalNativeBuild {
+                cmake.cppFlags '-g0'
+            }
         }
     }
 }
