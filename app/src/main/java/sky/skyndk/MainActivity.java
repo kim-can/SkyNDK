@@ -6,6 +6,8 @@ import android.util.SparseArray;
 import android.widget.Button;
 import android.widget.TextView;
 
+import junit.framework.Test;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -61,15 +63,15 @@ public class MainActivity extends SKYActivity<MainBiz> {
 		hashMap.put("startCityCode", "BJS");
 	}
 
-	public native static String stringFromJNI();
 
 	public native static String md5(HashMap<String, String> hashMap);
 
 //	public static native String md5(String hashMap);
 
 	@OnClick(R.id.btn_md5) public void onBtnMd5Clicked() {
-		// tvContent.setText(md5());
+		 tvContent.setText(md5(hashMap));
 		MD5Activity.intent();
+
 	}
 
 	@OnClick(R.id.btn_string) public void onBtnStringClicked() {

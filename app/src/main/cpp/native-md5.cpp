@@ -7,14 +7,12 @@
 #include <map>
 #include <iostream>
 #include <android/log.h>
-#include <algorithm>
-#include "AndroidLog.cpp"
+
 #include "md5.h"
 
-#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, "keymatch", __VA_ARGS__)
-
+#define LOG_TAG "System.out.cpp"
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
 using namespace std;
-
 
 //java hashmap转c map
 map<string, string> jmap2cmap(JNIEnv *env, jobject jobj) {
@@ -27,9 +25,6 @@ map<string, string> jmap2cmap(JNIEnv *env, jobject jobj) {
     jclass jsetclass = env->FindClass("java/util/Set");
     jmethodID jtoArraymid = env->GetMethodID(jsetclass, "toArray", "()[Ljava/lang/Object;");
     jobjectArray jobjArray = (jobjectArray) env->CallObjectMethod(jsetkey, jtoArraymid);
-    if (jobjArray == NULL) {
-        LOGD("param is NULL");
-    }
     jsize arraysize = env->GetArrayLength(jobjArray);
     int i = 0;
     for (i = 0; i < arraysize; i++) {
@@ -53,12 +48,9 @@ Java_sky_skyndk_MainActivity_md5(
         JNIEnv *env,
         jobject obj, jobject hashmap) {
     if (hashmap == NULL) {
-        LOGD("param is NULL");
+//        LOGD("param is NULL");
         return NULL;
     }
-    //打印输出
-    StreamBuf g_StreamBuf;
-    cout.rdbuf(&g_StreamBuf);
 
     //获得参数
     map<string, string> mapStudent = jmap2cmap(env, hashmap);
@@ -78,9 +70,18 @@ Java_sky_skyndk_MainActivity_md5(
             needMD5 += "&";
         }
     }
-    cout << "加密前:" << needMD5 << endl;
+
+    string print = "加密前:" + needMD5;
+
+//    LOGD("加密前: %s", print.c_str());
+
     MD5 md5;
     string sMD5 = md5.ToMD5(needMD5);
+
+    print = "加密后:" + sMD5;
+
+//    LOGD("加密后: %s", print.c_str());
+
     cout << "加密后:" << sMD5 << endl;
     return env->NewStringUTF(sMD5.c_str());
 }
