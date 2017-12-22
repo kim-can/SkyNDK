@@ -8,5 +8,6 @@
 /captures
 .idea
 .externalNativeBuild/cmake/
+app/.externalNativeBuild
 libs/
 
