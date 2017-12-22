@@ -9,5 +9,6 @@
 .idea
 .externalNativeBuild/cmake/
 app/.externalNativeBuild
+app/build
 libs/
 

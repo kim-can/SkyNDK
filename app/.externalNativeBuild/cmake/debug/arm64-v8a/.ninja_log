@@ -1,6 +1,0 @@
-# ninja log v5
-0	371	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	1e0ad2eb07a1018f
-0	546	0	CMakeFiles/native-lib.dir/src/main/cpp/AndroidLog.cpp.o	584998e8d5384d09
-0	654	0	CMakeFiles/native-lib.dir/src/main/cpp/md5.cpp.o	7053cc6da8ecd2da
-1	758	0	CMakeFiles/native-lib.dir/src/main/cpp/native-md5.cpp.o	9e61891f35625819
-758	815	0	/Users/sky/GitHub/SkyNDK/jniLibs/arm64-v8a/libnative-lib.so	90afeaa5aac7bc63
