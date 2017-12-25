@@ -1,6 +1,10 @@
 package sky.skyndk;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.LongSparseArray;
 import android.util.SparseArray;
 import android.widget.Button;
@@ -13,6 +17,7 @@ import java.util.LinkedHashMap;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import sky.core.L;
 import sky.core.SKYActivity;
 import sky.core.SKYBuilder;
 import sky.core.SKYHelper;
@@ -37,7 +42,7 @@ public class MainActivity extends SKYActivity<MainBiz> {
 	}
 
 	static {
-		System.loadLibrary("native-lib");
+		System.loadLibrary("SkyClientSDK");
 	}
 
 	@Override protected SKYBuilder build(SKYBuilder initialSKYBuilder) {
@@ -69,12 +74,30 @@ public class MainActivity extends SKYActivity<MainBiz> {
 //	public static native String md5(String hashMap);
 
 	@OnClick(R.id.btn_md5) public void onBtnMd5Clicked() {
+//		PackageManager pm = getPackageManager();
+//		PackageInfo pi = null;
+//		try {
+//			pi = pm.getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+//		} catch (PackageManager.NameNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		Signature[] signatures = pi.signatures;
+//		Signature signature0 = signatures[0];
+//		L.i(signature0.toCharsString());
+
+//		int maxLogSize = 1000;
+//		for(int i = 0; i <= signature0.toCharsString().length() / maxLogSize; i++) {
+//			int start = i * maxLogSize;
+//			int end = (i+1) * maxLogSize;
+//			end = end > signature0.toCharsString().length() ? signature0.toCharsString().length() : end;
+//			L.i(signature0.toCharsString().substring(start, end));
+//		}
 		 tvContent.setText(md5(hashMap));
-		MD5Activity.intent();
+//		MD5Activity.intent();
 
 	}
 
 	@OnClick(R.id.btn_string) public void onBtnStringClicked() {
-		tvContent.setText(md5(hashMap));
+//		tvContent.setText(md5(hashMap));
 	}
 }
